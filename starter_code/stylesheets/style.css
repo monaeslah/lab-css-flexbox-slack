@@ -1,22 +1,36 @@
-/*
-background purple: #540B51
-background ivory: #F3EAE2
-button blue: #4285F4
-titles black: #191817
-paragraph black: #000000
-paragraph yellow: #ECB12F
-links blue: #2E71A6
-footer links grey: #454245
-*/
+:root {
+  --background-purple: #540b51;
+  --background-ivory: #f3eae2;
+  --button-blue: #4285f4;
+  --titles-black: #191817;
+  --paragraph-black: #000000;
+  --paragraph-yellow: #ecb12f;
+  --links-blue: #2e71a6;
+  --footer-links-grey: #454245;
+}
 
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
+  color: var(--paragraph-black);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+nav {
+  background-color: var(--background-purple);
+}
+
+.google-signup {
+  background-color: var(--button-blue);
 }
 
 @media (max-width: 768px) {
@@ -24,72 +38,68 @@ body {
     display: none;
   }
   nav {
-    background-color: #540b51;
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    margin: 0px;
-    border-bottom: 1px solid #540b51;
+    border-bottom: 1px solid var(--background-purple);
   }
   nav img {
     width: 180px;
   }
-  .icons img {
-    height: 30px;
-    width: auto;
-    background-color: #540b51;
-    border: 0px;
-  }
+  .icons img,
   .icons button {
-    border: 0px;
-    background-color: #540b51;
+    width: 30px;
+    background-color: var(--background-purple);
+    border: none;
   }
 
   header {
-    background-color: #540b51;
+    background-color: var(--background-purple);
     width: 100%;
+    text-align: center;
   }
 
   h1 {
     font-size: 70px;
     font-weight: 300;
     color: white;
-    text-align: center;
     padding: 40px;
   }
+
   header p {
     color: white;
-    text-align: center;
     font-size: 24px;
   }
   header span {
     font-weight: bold;
-    color: orange;
+    color: var(--paragraph-yellow);
   }
+
   header button {
     text-transform: uppercase;
-    height: 80px;
+    height: 70px;
+    border-radius: 3px;
     margin: 10px;
     font-size: 20px;
     padding: 8px;
     border: none;
   }
+
   #google-icon {
     height: 40px;
     background-color: white;
     padding: 10px;
-    margin-right: auto;
   }
+
   .google-signup {
-    background-color: #4285f4;
     display: flex;
-    justify-content: flex-start;
+    gap: 60px;
     align-items: center;
+    color: white;
   }
   .google-signup span {
-    color: white;
-    text-align: center;
     margin-right: auto;
+    color: white;
   }
 
   header .buttons {
@@ -98,18 +108,16 @@ body {
     justify-content: center;
     margin: 50px;
   }
+
   .hero-image {
-    /* height: 300px; */
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: -30% 25%;
   }
-  .header-content {
-    overflow-y: hidden;
-    flex: 1;
-  }
-  .header-image {
-    flex: 1;
-  }
+
   .companies {
-    background-color: #f3eae2;
+    background-color: var(--background-ivory);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -124,15 +132,12 @@ body {
   }
   .companies div {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
-
   .companies img {
     height: 60px;
-    width: auto;
     padding: 5px;
   }
 
@@ -141,45 +146,41 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 50px 0;
   }
-
+  .team h3 {
+    color: var(--background-purple);
+    font-size: 32px;
+  }
+  .team p {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
   .team li {
     list-style-type: none;
     text-align: center;
     padding: 20px 0;
   }
-  .team h3 {
-    color: #540b51;
-    font-size: 32px;
-    padding: 50px 0 0 0;
-  }
-  .team p {
-    font-size: 22px;
-    text-align: center;
-    margin-bottom: 40px;
-  }
   .team span {
     font-size: 80px;
     font-weight: 900;
-    color: #540b51;
-    text-align: center;
+    color: var(--background-purple);
   }
-  .team li {
-    padding: 0 170px;
-  }
+
   .info {
     text-align: center;
     font-size: 14px;
     font-weight: 100;
-    color: #454245;
+    color: var(--footer-links-grey);
     padding: 0 50px 50px;
   }
+
   .welcome {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #540b51;
+    background-color: var(--background-purple);
     padding: 50px;
   }
   .welcome h3 {
@@ -189,58 +190,73 @@ body {
   }
   .welcome button {
     border: none;
-    background-color: inherit;
     text-transform: uppercase;
     height: 80px;
     margin: 10px;
     font-size: 20px;
     padding: 8px;
     font-weight: 500;
+    width: 90%;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   .welcome > :nth-child(2) {
     background-color: white;
-    color: #540b51;
-    width: 90%;
-    border-radius: 5px;
+    color: var(--background-purple);
   }
   .welcome > :nth-child(3) {
-    background-color: #540b51;
+    background-color: var(--background-purple);
     color: white;
     border: 3px solid white;
-    width: 90%;
-    border-radius: 5px;
   }
+  .welcome button:hover {
+    background-color: var(--button-blue);
+    color: white;
+  }
+
   footer {
-    padding-top: 20px;
-    padding-left: 20px;
+    padding: 20px;
   }
   footer ul {
     margin: 0 20px;
     font-size: 14px;
     font-weight: 700;
   }
-  footer > :nth-child(1) {
-    border-top: 1px solid #454245;
+  footer ul:first-of-type {
+    border-top: 1px solid var(--footer-links-grey);
+    padding-top: 20px;
   }
-
   footer li {
     padding: 10px;
     list-style-type: none;
   }
-  footer li:last-child {
-    color: #2e71a6;
+  footer li a {
+    color: var(--footer-links-grey);
+    text-decoration: none;
   }
-  footer li:last-child img {
-    padding-right: 10px;
+  footer li a:hover {
+    color: var(--links-blue);
+    text-decoration: underline;
   }
+
   .sociallinks {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     padding: 20px 0;
   }
+  .sociallinks i {
+    color: var(--footer-links-grey);
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  .sociallinks i:hover {
+    color: var(--links-blue);
+  }
+
   .small {
     text-align: center;
     margin-bottom: 30px;
+    font-size: 14px;
+    color: var(--footer-links-grey);
   }
 }
