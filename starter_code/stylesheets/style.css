@@ -8,3 +8,239 @@ paragraph yellow: #ECB12F
 links blue: #2E71A6
 footer links grey: #454245
 */
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+  nav {
+    background-color: #540b51;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0px;
+    border-bottom: 1px solid #540b51;
+  }
+  nav img {
+    width: 180px;
+  }
+  .icons img {
+    height: 30px;
+    width: auto;
+    background-color: #540b51;
+    border: 0px;
+  }
+  .icons button {
+    border: 0px;
+    background-color: #540b51;
+  }
+
+  header {
+    background-color: #540b51;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 70px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    padding: 40px;
+  }
+  header p {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+  }
+  header span {
+    font-weight: bold;
+    color: orange;
+  }
+  header button {
+    text-transform: uppercase;
+    height: 80px;
+    margin: 10px;
+    font-size: 20px;
+    padding: 8px;
+    border: none;
+  }
+  #google-icon {
+    height: 40px;
+    background-color: white;
+    padding: 10px;
+    margin-right: auto;
+  }
+  .google-signup {
+    background-color: #4285f4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .google-signup span {
+    color: white;
+    text-align: center;
+    margin-right: auto;
+  }
+
+  header .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px;
+  }
+  .hero-image {
+    /* height: 300px; */
+  }
+  .header-content {
+    overflow-y: hidden;
+    flex: 1;
+  }
+  .header-image {
+    flex: 1;
+  }
+  .companies {
+    background-color: #f3eae2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
+  .companies p {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 20px;
+  }
+  .companies div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .companies img {
+    height: 60px;
+    width: auto;
+    padding: 5px;
+  }
+
+  .team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .team li {
+    list-style-type: none;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .team h3 {
+    color: #540b51;
+    font-size: 32px;
+    padding: 50px 0 0 0;
+  }
+  .team p {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .team span {
+    font-size: 80px;
+    font-weight: 900;
+    color: #540b51;
+    text-align: center;
+  }
+  .team li {
+    padding: 0 170px;
+  }
+  .info {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 100;
+    color: #454245;
+    padding: 0 50px 50px;
+  }
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #540b51;
+    padding: 50px;
+  }
+  .welcome h3 {
+    color: white;
+    font-size: 32px;
+    padding-bottom: 30px;
+  }
+  .welcome button {
+    border: none;
+    background-color: inherit;
+    text-transform: uppercase;
+    height: 80px;
+    margin: 10px;
+    font-size: 20px;
+    padding: 8px;
+    font-weight: 500;
+  }
+  .welcome > :nth-child(2) {
+    background-color: white;
+    color: #540b51;
+    width: 90%;
+    border-radius: 5px;
+  }
+  .welcome > :nth-child(3) {
+    background-color: #540b51;
+    color: white;
+    border: 3px solid white;
+    width: 90%;
+    border-radius: 5px;
+  }
+  footer {
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  footer ul {
+    margin: 0 20px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  footer > :nth-child(1) {
+    border-top: 1px solid #454245;
+  }
+
+  footer li {
+    padding: 10px;
+    list-style-type: none;
+  }
+  footer li:last-child {
+    color: #2e71a6;
+  }
+  footer li:last-child img {
+    padding-right: 10px;
+  }
+  .sociallinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  .small {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
